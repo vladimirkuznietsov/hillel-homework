@@ -4,5 +4,5 @@ const types = [1, 'Text', true, null, undefined, 1231231231231231231231231231231
 
 
 for(let i = 0; i < types.length; i++) {
-    console.log(`${String(types[i])}: ${typeof types[i]}`)
-};
+    console.log(`${String(types[i])}: ${typeof types[i]}`);
+}
