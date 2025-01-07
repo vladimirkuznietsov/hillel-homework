@@ -1,13 +1,5 @@
-let num = 12345;
-let result = '';
+const num = 12345;
 
-for (let i = 0; i < `${num}`.length; i++) {
-    if (`${num}`[i].indexOf == `${num}`.length - 1) {
-        result = result + `${num}`[i];
-    }   
-    else {
-        result = result + `${num}`[i] + ' ';
-    }
-  }
+const result = num.toString().replace(/(.)(?=.)/g, '$1 ');
 
 console.log(result);

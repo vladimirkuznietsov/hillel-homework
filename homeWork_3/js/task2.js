@@ -1,10 +1,5 @@
-let users = [prompt("First user name:"), prompt('Second user name:'), prompt('Third user name:')];
+const str_1 = prompt('Enter something:');
+const str_2 = prompt('Enter something:');
+const str_3 = prompt('Enter something:');
 
-const result = [];
-
-for(let i = 0; i < 3; i++) {
-    let rand = Math.floor(Math.random() * users.length);
-    result.includes(users[rand]) ? i-- : result.push(users[rand]);
-}
-
-console.log(result.toString());
+console.log(`String 3: ${str_3}\nString 1: ${str_1}\nString 2: ${str_2}`);
