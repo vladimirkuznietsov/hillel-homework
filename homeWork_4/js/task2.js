@@ -5,7 +5,7 @@ let two_equal;
 if ((userNumber[0] == userNumber[1]) && (userNumber[0] == userNumber[2])) {
     all_equal = true;
     two_equal = true;
-} else if ((userNumber[0] == userNumber[1]) || (userNumber[0] == userNumber[2])) {
+} else if ((userNumber[0] == userNumber[1]) || (userNumber[0] == userNumber[2]) || (userNumber[1] == userNumber[2])) {
     all_equal = false;
     two_equal = true;
 } else {
