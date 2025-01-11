@@ -1,74 +1,79 @@
-const yearOfBirth = prompt('Введіть рік народження:');
-const city = prompt('Введіть місто, в якому проживаєте:');
-const favoriteSport = prompt('Введіть ваш улюблений вид спорту:');
-let country;
-let sportStar;
 let date = new Date();
-currentYear = date.getFullYear();
+let currentYear = date.getFullYear();
+let yearOfBirth = prompt('Введіть рік народження:');
 
-switch(city) {
-    case 'Київ':
-        country = 'столиці України';
-        break;
-    case 'Вашингтон':
-        country = 'столиці США';
-        break;
-    case 'Лондон':
-        country = 'столиці Британії';
-        break;
-    default:
-        country = city;
+if (Number(yearOfBirth) > currentYear || Number(yearOfBirth) < 1900 || isNaN(Number(yearOfBirth))) {
+    do {
+        alert('Введіть корректний рік');
+        yearOfBirth = prompt('Введіть рік народження:');
+    } while (Number(yearOfBirth) > currentYear || Number(yearOfBirth) < 1900 || isNaN(Number(yearOfBirth)));
 }
 
-switch(favoriteSport) {
-    case 'Футбол':
-        sportStar = 'Ліонелем Мессі';
+
+const city = prompt('Введіть місто, в якому проживаєте:');
+let youLiveInText;
+
+switch (city) {
+    case 'Київ':
+        youLiveInText = 'столиці України';
         break;
-    case 'Баскетбол':
-        sportStar = 'Майклом Джорданом';
+    case 'Вашингтон':
+        youLiveInText = 'столиці США';
         break;
-    case 'Біг':
-        sportStar = 'Усейном Болтом';
+    case 'Лондон':
+        youLiveInText = 'столиці Британії';
         break;
     default:
+        youLiveInText = `місті ${city}`;
+        break;
+}
+
+const favoriteSport = prompt('Введіть ваш улюблений вид спорту:');
+let sportText;
+
+
+switch (favoriteSport) {
+    case 'Футбол':
+        sportText = 'Круто! Хочеш стати Ліонелем Мессі?';
+        break;
+    case 'Баскетбол':
+        sportText = 'Круто! Хочеш стати Майклом Джорданом?';
+        break;
+    case 'Біг':
+        sportText = 'Круто! Хочеш стати Усейном Болтом?';
+        break;
+    default:
+        sportText = `${favoriteSport} це круто!`;
         break;
 }
 
 if (yearOfBirth && city && favoriteSport) {
     alert(`${currentYear - yearOfBirth}
-        Ти живеш у ${country}
-        Круто! Хочеш стати ${sportStar}?`)
+                Ти живеш у ${youLiveInText}
+                ${sportText}`)
+} else if (yearOfBirth && city && !favoriteSport) {
+    alert(`${currentYear - yearOfBirth}
+                Ти живеш у ${youLiveInText}
+                Шкода, що Ви не захотіли ввести свій(ю) спорт`);
+} else if (yearOfBirth && !city && favoriteSport) {
+    alert(`${currentYear - yearOfBirth}
+                ${sportText}
+                Шкода, що Ви не захотіли ввести свій(ю) місто`);
+} else if (!yearOfBirth && city && favoriteSport) {
+    alert(`Ти живеш у ${youLiveInText}
+                ${sportText}
+                Шкода, що Ви не захотіли ввести свій(ю) рік народження`);
+} else if (yearOfBirth && !city && !favoriteSport) {
+    alert(`${currentYear - yearOfBirth}
+                Шкода, що Ви не захотіли ввести свій(ю) спорт та місто`);
+} else if (!yearOfBirth && city && !favoriteSport) {
+    alert(`Ти живеш у ${youLiveInText}
+                Шкода, що Ви не захотіли ввести свій(ю) рік народження та спорт`);
+} else if (!yearOfBirth && !city && favoriteSport) {
+    alert(`Круто! Хочеш стати ${sportText}?
+                Шкода, що Ви не захотіли ввести свій(ю) рік народження та місто`);
 } else {
-    switch(true){
-        case yearOfBirth && city && !favoriteSport:
-
-            alert(`${currentYear - yearOfBirth}
-                   Ти живеш у ${country}
-                   Шкода, що Ви не захотіли ввести свій(ю) спорт`);
-            break;
-        case yearOfBirth && !city && !favoriteSport:
-            alert(`${currentYear - yearOfBirth}
-                   Шкода, що Ви не захотіли ввести свій(ю) спорт та місто`);
-            break;
-        case !yearOfBirth && city && !favoriteSport:
-            alert(`Ти живеш у ${country}
-                   Шкода, що Ви не захотіли ввести свій(ю) рік народження та спорт`);
-            break;
-        case !yearOfBirth && !city && favoriteSport:
-            alert(`Круто! Хочеш стати ${sportStar}?
-                   Шкода, що Ви не захотіли ввести свій(ю) рік народження та місто`);
-            break;
-        case !yearOfBirth && city && favoriteSport:
-            alert(`Ти живеш у ${country}
-                   Круто! Хочеш стати ${sportStar}?
-                   Шкода, що Ви не захотіли ввести свій(ю) рік народження`);
-            break;
-        case yearOfBirth && !city && favoriteSport:
-            alert(`${currentYear - yearOfBirth}
-                   Круто! Хочеш стати ${sportStar}?
-                   Шкода, що Ви не захотіли ввести свій(ю) місто`);
-            break;
-        case !yearOfBirth && !city && !favoriteSport:
-            alert(`Шкода, що Ви не захотіли ввести свій(ю) рік народження, місто та спорт`);
-    }
+    alert(`Шкода, що Ви не захотіли ввести свій(ю) рік народження, місто та спорт`);
 }
+
+
