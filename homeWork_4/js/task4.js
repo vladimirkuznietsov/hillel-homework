@@ -1,7 +1,7 @@
 let numOrStr = prompt('input number or string');
 console.log(numOrStr);
 
-switch(true) {
+switch (true) {
     case null:
         console.log('Ви скасували');
         break;
