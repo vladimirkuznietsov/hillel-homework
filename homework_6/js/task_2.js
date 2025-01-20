@@ -3,7 +3,7 @@ const differentTypes = ["String", 3, 43, null, true, 27, false, 15, Symbol('uniq
 const midValue = (array) => {
     let numbersCount = 0;
 
-    const sum =  array.reduce((sum, item) => {
+    const sum = array.reduce((sum, item) => {
         if (typeof item == 'number') {
             numbersCount += 1;
             return sum + item;
