@@ -1,4 +1,5 @@
-const provideAString = prompt('Enter a string:');
+const deleteSymbolsDefinedByUser = function () {
+    const provideAString = prompt('Enter a string:');
 
 if (provideAString == null || provideAString == "") {
     alert('String was not provided');
@@ -17,3 +18,6 @@ if (provideAString == null || provideAString == "") {
         }
     }
 }
+}
+
+deleteSymbolsDefinedByUser();
