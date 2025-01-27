@@ -5,7 +5,7 @@ const askUser = () => {
         const provideNumber = prompt('Please provide number larger than 100:');
         const toNum = Number(provideNumber);
 
-        if(toNum > 100 || isNaN(toNum) || attempts === 9) {
+        if(toNum > 100 || isNaN(toNum)) {
             console.log(provideNumber);
             break;
         }
