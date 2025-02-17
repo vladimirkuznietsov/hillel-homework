@@ -16,9 +16,9 @@ const contactBook = {
             email: 'kent3@gmail.com'
         }
     ],
-    searchContact: function(name) {
+    searchContact: function (name) {
         result = this.data.find(contact => contact.name.toLowerCase() === name.toLowerCase());
-        if(result) {
+        if (result) {
             return `Name: ${result.name}
                     \nPhone Number: ${result.phoneNumber}
                     \nEmail: ${result.email}`;
@@ -26,11 +26,12 @@ const contactBook = {
             return 'No results';
         }
     },
-    addContact: function(name, number, email) {
-        const newContact = {name: name,
-                            phoneNumber: number,
-                            email: email
-                            };
+    addContact: function (name, number, email) {
+        const newContact = {
+            name: name,
+            phoneNumber: number,
+            email: email
+        };
         this.data.push(newContact);
     }
 };
