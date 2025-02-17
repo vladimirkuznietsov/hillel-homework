@@ -1,0 +1,25 @@
+div {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#text-block {
+    font-size: 36px;
+    color: crimson;
+    transition: color 2000ms;
+}
+
+button {
+    margin-top: 30px;
+    width: 400px;
+    height: 70px;
+    border: 0px;
+    border-radius: 12px;
+    font-size: 24px;
+    background-color: greenyellow;
+}
+
+button:hover {
+    background-color: aqua;
+    transition: 250ms;
+}
