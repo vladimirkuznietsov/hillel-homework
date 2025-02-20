@@ -5,7 +5,6 @@ let urlAddress = '';
 
 
 enterUrlBtn.addEventListener('click', () => {
-    isEnterBtnClicked = true;
     const enterUrlPrompt = prompt('Please enter your URL');
 
     if((enterUrlPrompt.includes('https://') || enterUrlPrompt.includes('http://')) && enterUrlPrompt.includes('.')) {
