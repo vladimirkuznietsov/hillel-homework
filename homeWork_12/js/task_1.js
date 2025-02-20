@@ -2,11 +2,10 @@ const enterUrlBtn = document.getElementById('enter-btn');
 const openUrlBtn = document.getElementById('open-btn');
 const urlDisplay = document.getElementById('url-section');
 let urlAddress = '';
-let clicksOnEnterBtnCounter = false;
 
 
 enterUrlBtn.addEventListener('click', () => {
-    clicksOnEnterBtnCounter = true;
+    isEnterBtnClicked = true;
     const enterUrlPrompt = prompt('Please enter your URL');
 
     if((enterUrlPrompt.includes('https://') || enterUrlPrompt.includes('http://')) && enterUrlPrompt.includes('.')) {
