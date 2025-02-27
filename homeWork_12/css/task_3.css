@@ -1,0 +1,50 @@
+.container {
+    text-align: center;
+}
+
+.to-do-items {
+    display: inline-block;
+    text-align: left;
+}
+
+.add-new-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.delete-btn {
+    margin-left: 16px;
+    width: 64px;
+    background-color: red;
+    color: white;
+    border: 1px red;
+    border-radius: 2px;
+    height: 24px;
+}
+
+.add-btn {
+    width: 64px;
+    background-color: green;
+    color: white;
+    border: 1px green;
+    border-radius: 2px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+}
+
+.add-btn:active {
+    background-color: greenyellow;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
