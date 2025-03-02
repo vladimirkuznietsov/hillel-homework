@@ -1,0 +1,37 @@
+img {
+    height: 200px;
+}
+
+.slider {
+    text-align: center;
+    margin-top: 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#previous {
+    display: none;
+    position: absolute; /* set button to an absolute position */
+    top: 50%; /* adjust the top position of the button */
+    left: 40%; /* adjust the left position of the button */
+    transform: translate(-50%, -50%); /* center the button */
+    z-index: 2; /* set a higher z-index than the image */
+    border: none; /* remove button border */
+    padding: 5px 10px; /* set your desired padding */
+    cursor: pointer; /* change mouse cursor on hover */
+}
+
+#next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
