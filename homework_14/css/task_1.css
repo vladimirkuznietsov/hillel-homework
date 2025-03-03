@@ -9,6 +9,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #previous {
@@ -34,4 +35,27 @@ img {
     padding: 5px 10px;
     cursor: pointer;
     font-size: 12px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
 }
