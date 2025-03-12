@@ -16,6 +16,6 @@ class Calculator {
     }
 }
 
-calc = new Calculator();
+let calc = new Calculator();
 
 console.log(calc.divide(7, 2));
