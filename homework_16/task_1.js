@@ -11,12 +11,17 @@ class Student {
         this.attendance = new Array(25).fill(null);
     }
 
-    get yearOfBirth() {
-        return this.#yearOfBirth;
+    get age() {
+        const currentYear = new Date().getFullYear();
+        return currentYear - this.#yearOfBirth;
     }
 
     avgGrade() {
+        if(this.grades.length > 0) {
         return this.grades.reduce((a, b) => a + b, 0) / this.grades.length;
+        } else {
+            return 0;
+        }
     }
 
     present() {
@@ -43,7 +48,7 @@ class Student {
         const grade = this.avgGrade();
         const attended = this.attendance.filter((lecture) => lecture === true).length;
         const totalClasses = this.attendance.filter((lecture) => lecture !== null).length;
-        const avgAttendance = attended / totalClasses;
+        const avgAttendance = totalClasses > 0 ? attended / totalClasses : 0;
         console.log(avgAttendance);
 
         if(grade > 90 && avgAttendance > 0.9) {
@@ -64,9 +69,10 @@ let Mark = new Student('John', 'Malkovic', 2002);
 let Susy = new Student('Susy', 'Brown', 2003);
 let Abby = new Student('Abby', 'Kaos', 2001);
 
-console.log(Mark.yearOfBirth);
-console.log(Susy.yearOfBirth);
-console.log(Abby.yearOfBirth);
+console.log(Mark.age);
+console.log(Susy.age);
+console.log(Abby.age);
+console.log(Mark.summary());
 
 Susy.absent();
 Susy.present();
