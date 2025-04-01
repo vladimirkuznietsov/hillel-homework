@@ -1,0 +1,28 @@
+#root {
+    text-align: center;
+}
+
+#widget {
+    background-color: blue;
+    height: 350px;
+    width: 480px;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: aliceblue;
+}
+
+.widget-header {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+#temp-feels {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#request-forecast {
+    margin-top: 450px;
+}
