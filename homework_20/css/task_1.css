@@ -67,3 +67,25 @@ h1, h2 {
     width: 95px;
     padding: 10px;
 }
+
+.modal {
+    height: 300px;
+    width: 500px;
+    background-color: red;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+
+}
+
+.closeBtn {
+    width: 40px;
+    height: 25px;
+    margin-left: 94%;
+}
