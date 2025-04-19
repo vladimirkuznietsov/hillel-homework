@@ -1,0 +1,12 @@
+{
+  "name": "homework_21",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel js -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
